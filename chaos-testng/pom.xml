@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>dev.bharathc</groupId>
+    <artifactId>chaos-parent</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>chaos-testng</artifactId>
+  <packaging>jar</packaging>
+
+  <build>
+    <plugins>
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>2.22.0</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <artifactId>testng</artifactId>
+      <groupId>org.testng</groupId>
+    </dependency>
+  </dependencies>
+
+</project>
