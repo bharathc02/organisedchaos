@@ -2,13 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Simple Automation" parallel="methods" thread-count="5" verbose="1">
-    <listeners>
-    </listeners>
+  <listeners>
+  </listeners>
 
-    <test name="Simple Web Test" parallel="methods" thread-count="5">
-        <parameter name="browserName" value="chrome"/>
-        <classes>
-            <class name="com.everwhimsical.organisedchaos.MapTest"/>
-        </classes>
-    </test>
+  <test name="Simple Web Test" parallel="methods" thread-count="5">
+    <classes>
+      <class name="com.everwhimsical.organisedchaos.WebTest"/>
+    </classes>
+  </test>
 </suite>

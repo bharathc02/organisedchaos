@@ -5,11 +5,11 @@ import java.time.ZonedDateTime;
 
 public interface FileMetaData {
 
-    File getFile();
+  File getFile();
 
-    String getDescription();
+  String getDescription();
 
-    ZonedDateTime getCapturedDateTime();
+  ZonedDateTime getCapturedDateTime();
 
-    Status getStatus();
+  Status getStatus();
 }
