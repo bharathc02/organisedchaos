@@ -17,40 +17,40 @@ import org.slf4j.Logger;
  */
 public class Reader {
 
-    private static Logger LOGGER = SimpleLogger.getLogger();
+  private static Logger LOGGER = SimpleLogger.getLogger();
 
-    /**
-     * Read the content of file as String.
-     *
-     * @param filePath Resources file path
-     * @return file contents
-     */
-    public static String text(String filePath) {
-        try {
-            URL url = Resources.getResource(filePath);
-            return Files.readAllLines(Paths.get(url.toURI()))
-                .stream().collect(Collectors.joining());
-        } catch (IOException | URISyntaxException e) {
-            LOGGER.error("Unable to read file ({})", filePath, e);
-            throw new ChaosException("Unable to read file ({})", e, filePath);
-        }
+  /**
+   * Read the content of file as String.
+   *
+   * @param filePath Resources file path
+   * @return file contents
+   */
+  public static String text(String filePath) {
+    try {
+      URL url = Resources.getResource(filePath);
+      return Files.readAllLines(Paths.get(url.toURI()))
+          .stream().collect(Collectors.joining());
+    } catch (IOException | URISyntaxException e) {
+      LOGGER.error("Unable to read file ({})", filePath, e);
+      throw new ChaosException("Unable to read file ({})", e, filePath);
     }
+  }
 
-    /**
-     * Read the content of file as Properties.
-     *
-     * @param filePath Resources file path
-     * @return {@link Properties} object
-     */
-    public static Properties properties(String filePath) {
-        try {
-            URL url = Resources.getResource(filePath);
-            Properties properties = new Properties();
-            properties.load(url.openStream());
-            return properties;
-        } catch (IOException e) {
-            LOGGER.error("Unable to read properties file ({})", filePath, e);
-            throw new ChaosException("Unable to read properties file ({})", e, filePath);
-        }
+  /**
+   * Read the content of file as Properties.
+   *
+   * @param filePath Resources file path
+   * @return {@link Properties} object
+   */
+  public static Properties properties(String filePath) {
+    try {
+      URL url = Resources.getResource(filePath);
+      Properties properties = new Properties();
+      properties.load(url.openStream());
+      return properties;
+    } catch (IOException e) {
+      LOGGER.error("Unable to read properties file ({})", filePath, e);
+      throw new ChaosException("Unable to read properties file ({})", e, filePath);
     }
+  }
 }
