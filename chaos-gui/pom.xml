@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>dev.bharathc</groupId>
+    <artifactId>chaos-parent</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>chaos-gui</artifactId>
+  <packaging>jar</packaging>
+
+  <build>
+    <plugins>
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>2.22.0</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>dev.bharathc</groupId>
+      <artifactId>chaos-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <artifactId>selenium-java</artifactId>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <version>3.141.59</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+      <artifactId>java-client</artifactId>
+      <groupId>io.appium</groupId>
+      <version>7.5.1</version>
+    </dependency>
+  </dependencies>
+
+</project>

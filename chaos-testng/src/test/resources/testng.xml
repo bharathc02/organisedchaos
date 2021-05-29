@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Simple Automation" parallel="methods" thread-count="5" verbose="1">
+  <listeners>
+  </listeners>
+
+  <test name="Simple Test" parallel="methods" thread-count="5">
+    <classes>
+    </classes>
+  </test>
+</suite>
